@@ -13,11 +13,8 @@ var jsonParser = bodyParser.json()
 dotenv.config()
 const app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-import path from 'path'
-import {fileURLToPath} from 'url';
-const __filename = fileURLToPath(import.meta.url);
 
-const __dirname = path.dirname(__filename);
+
 
 app.use(express.json());
 app.use(bodyParser.json())
