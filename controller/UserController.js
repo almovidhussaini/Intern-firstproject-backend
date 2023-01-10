@@ -2,6 +2,7 @@ import {User} from '../model/UserModel.js'
  export const registerUser = async(req, res) => {
 
     try {
+        
         let payload = {
             name: req.body.name,
             password: req.body.password,
@@ -26,6 +27,7 @@ import {User} from '../model/UserModel.js'
 }
 
 export const loginUser = async(req, res) =>{
+    console.log('inside login')
    try {
     let user = await User.findOne( {email:req.body.email , password : req.body.password})
     if(user){
