@@ -5,9 +5,9 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 
 
-import UserRoutes from './routes/UserRoutes.js';
-import VerificationRoutes from './routes/VerificationRoutes.js'
-import ItemsRoutes from './routes/ItemsRoutes.js';
+// import UserRoutes from './routes/UserRoutes.js';
+// import VerificationRoutes from './routes/VerificationRoutes.js'
+// import ItemsRoutes from './routes/ItemsRoutes.js';
 
 var jsonParser = bodyParser.json()
 dotenv.config()
@@ -21,7 +21,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
+// app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
 
 let PORT = process.env.PORT
 app.listen(PORT||5000, ()=>{
