@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
+// app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
 
 let PORT = process.env.PORT
 app.listen(PORT||5000, ()=>{
