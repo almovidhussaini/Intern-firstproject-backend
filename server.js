@@ -4,9 +4,9 @@ import mongoose from 'mongoose';
 import cors from 'cors'
 import dotenv from 'dotenv'
 
-import UserRoutes from './var/task/routes/userRoutes.js';
-import VerificationRoutes from './var/task/routes/verificationRoutes.js';
-import ItemsRoutes from './var/task/routes/itemsRoutes.js'
+import UserRoutes from './routes/userRoutes.js';
+import VerificationRoutes from './routes/verificationRoutes.js';
+import ItemsRoutes from './routes/itemsRoutes.js'
 
 var jsonParser = bodyParser.json()
 dotenv.config()
