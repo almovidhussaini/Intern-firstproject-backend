@@ -47,7 +47,7 @@ app.listen(process.env.PORT||5000, ()=>{
             console.log('db connected');
         });
         console.log('server is  started')
-        console.log(MONGODB_URI, 'mongo uri')
+        console.log(process.env.MONGODB_URI, 'mongo uri')
     }
     catch(err){
         console.log(err )
