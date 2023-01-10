@@ -1,5 +1,5 @@
 import express from 'express'
-import {nodemailerNotification,verifiyUser } from '../utils.js';
+import {nodemailerNotification,verifiyUser } from '../../../../utils.js';
 
 const router = express.Router();
 
