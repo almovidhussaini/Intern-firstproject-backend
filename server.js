@@ -8,19 +8,33 @@ import UserRoutes from './routes/userRoutes.js';
 import VerificationRoutes from './routes/verificationRoutes.js';
 import ItemsRoutes from './routes/itemsRoutes.js'
 
+import path from 'path'
+import {fileURLToPath} from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+
 var jsonParser = bodyParser.json()
 dotenv.config()
 const app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+
+app.use(express.static(path.resolve(__dirname, './build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './build', 'index.html'));
+});
+
 app.use(express.json());
 app.use(bodyParser.json())
 app.use(cors())
 
+
 app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
 
-let PORT = process.env.PORT
-app.listen(PORT||5000, ()=>{
+
+app.listen(process.env.PORT||5000, ()=>{
     try{
         mongoose.set("strictQuery", true);
         mongoose.connect(
