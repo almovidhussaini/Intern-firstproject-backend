@@ -4,9 +4,9 @@ import mongoose from 'mongoose';
 import cors from 'cors'
 import dotenv from 'dotenv'
 
-import UserRoutes from './routes/userRoutes.js';
-import VerificationRoutes from './routes/verificationRoutes.js';
-import ItemsRoutes from './routes/itemsRoutes.js'
+// import UserRoutes from './routes/userRoutes.js';
+// import VerificationRoutes from './routes/verificationRoutes.js';
+// import ItemsRoutes from './routes/itemsRoutes.js'
 
 import path from 'path'
 import {fileURLToPath} from 'url';
@@ -31,7 +31,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
+// app.use('/api',UserRoutes,VerificationRoutes,ItemsRoutes )
 
 
 app.listen(process.env.PORT||5000, ()=>{
